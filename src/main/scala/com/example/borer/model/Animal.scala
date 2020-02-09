@@ -1,8 +1,8 @@
 package com.example.borer.model
 
-import com.example.borer.serializable.CborSerializable
+import com.example.borer.serializable.BorerSerializable
 
-sealed abstract class Animal extends CborSerializable
+sealed abstract class Animal extends BorerSerializable
 
 object Animal {
   final case class Lion(firstname: String) extends Animal {

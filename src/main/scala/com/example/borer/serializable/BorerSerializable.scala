@@ -1,3 +1,3 @@
 package com.example.borer.serializable
 
-trait CborSerializable
+trait BorerSerializable

@@ -1,5 +1,5 @@
 package com.example.borer.model
 
-import com.example.borer.serializable.CborSerializable
+import com.example.borer.serializable.BorerSerializable
 
-final case class Zoo(primaryAttraction: Animal) extends CborSerializable
+final case class Zoo(primaryAttraction: Animal) extends BorerSerializable

@@ -1,7 +1,7 @@
 package com.example.jackson.model
 
 import com.example.jackson.model.Animal.{Elephant, Lion, Tiger}
-import com.example.jackson.serializable.JsonSerializable
+import com.example.jackson.serializable.JacksonSerializable
 import com.fasterxml.jackson.annotation.{JsonSubTypes, JsonTypeInfo}
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.{JsonSubTypes, JsonTypeInfo}
     new JsonSubTypes.Type(value = classOf[Tiger], name = "tiger"),
   )
 )
-sealed abstract class Animal extends JsonSerializable
+sealed abstract class Animal extends JacksonSerializable
 
 object Animal {
 

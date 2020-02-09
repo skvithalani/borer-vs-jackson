@@ -1,6 +1,6 @@
 package com.example.jackson.model
 
-import com.example.jackson.serializable.JsonSerializable
+import com.example.jackson.serializable.JacksonSerializable
 import com.fasterxml.jackson.core.{JsonGenerator, JsonParser}
 import com.fasterxml.jackson.databind.annotation.{
   JsonDeserialize,
@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.{
 
 @JsonSerialize(using = classOf[DirectionJsonSerializer])
 @JsonDeserialize(using = classOf[DirectionJsonDeserializer])
-sealed trait Direction extends JsonSerializable
+sealed trait Direction extends JacksonSerializable
 
 object Direction {
   case object North extends Direction
@@ -55,4 +55,5 @@ class DirectionJsonDeserializer
   }
 }
 
-final case class Compass(currentDirection: Direction) extends JsonSerializable
+final case class Compass(currentDirection: Direction)
+    extends JacksonSerializable
