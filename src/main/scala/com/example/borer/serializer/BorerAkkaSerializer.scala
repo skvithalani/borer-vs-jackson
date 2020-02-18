@@ -1,6 +1,5 @@
 package com.example.borer.serializer
 
-import akka.actor.ExtendedActorSystem
 import akka.serialization.Serializer
 import com.example.borer.codec.Codecs
 import com.example.borer.message.{Compass, Zoo}
@@ -8,7 +7,7 @@ import io.bullet.borer.{Decoder, Json}
 
 import scala.reflect.ClassTag
 
-class BorerAkkaSerializer(_actorSystem: ExtendedActorSystem) extends Serializer with Codecs {
+class BorerAkkaSerializer() extends Serializer with Codecs {
 
   override def identifier: Int          = 19923
   override def includeManifest: Boolean = true
